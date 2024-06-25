@@ -3,7 +3,7 @@ die,Ente,le canard,true,,
 ,starten,démarrer,true,,
 ,gerade,tout droit (ou nombres pairs),true,,
 die,Art,la sorte,true,,
-,niedrig,,,,?
+,niedrig,bas. Peu élevé,,,
 die,Tastatur,le clavier,true,,
 ,gucken,regarder (zieuter),true,,
 der,Schmetterling,le papillon,true,,
@@ -25,15 +25,16 @@ die,Fitness,"le fitness, la condition physique",true,,
 das,Fitnesstraining,le workout,true,,
 ,ruhig,calme,true,,
 die,Rezeption,"la réception, (dans le sens ""help desk"")",true,,
-,Fern-,"préfixe : ""à longue porté""",true,,Télévision pas trouvé dans le dico (das Fernseher?)
+,Fern-,"préfixe : ""à longue porté""",true,,
+der,Fernseher,la télévision,,,
 der,Ausflug,"l'execursion, le voyage",true,,
 der,Buchladen,la librairie (bookshop),true,,
 die,Bar,le bar,true,,
 der,Strand,la plage,true,,
 der,Pass,le passeport,true,,
-,DoppelZimmer,la chambre double,true,,Genre
+das,DoppelZimmer,la chambre double,true,,
 ,Doppel-,préfixe : double,true,,
-,Einzelzimmer,La chambre simple,true,,Genre
+das,Einzelzimmer,La chambre simple,true,,
 ,einzel,simple. unique. (tennis en simple. Chambre simple (vs chambre double)),true,,
 ,pflanzen,planter,true,,
 die,Pflanze,la plante,true,,
@@ -49,7 +50,7 @@ das,Sofa,le canapé,true,,
 die,Vase,le vase,true,,
 die,Nachbarin,la voisine,true,,
 ,wohnen,habiter,true,,
-,Mehrfamilienhause,Kot?,,,"Genre, équiv français"
+das,Mehrfamilienhause,l'immeuble,,,
 ,zurzeit,Aujourd'hui. ces jours ci. en ce moment,true,,
 die,Treppe,les escaliers,true,,
 ,mal,"le nombre de fois. fois. en anglais : ""times""",true,,
@@ -59,26 +60,26 @@ die,Kundin,la cliente,true,,
 ,besondere,spécial. Particulier,,,
 ,besonderes,spécial. Particulier,,,
 ,dabei,par conséquent,,,
-,danach,,,,à compléter
-,sollen,,,,à compléter
-,begrüßen,,,,à compléter
-,Reparieren,,,,à compléter
-,Angebot,,,,à compléter
-,führen,,,,à compléter
-,Flugzeug,,,,à compléter
-,anderthalb,,,,à compléter
-,Abendbrot,,,,à compléter
-,fern,,,,à compléter
-,Regel,,,,à compléter
-,Studium,,,,à compléter
-,Studio,,,,à compléter
-,tagsüber,,,,à compléter
-,selten,,,,à compléter
-,Feier,,,,à compléter
-,Feierabend,,,,à compléter
-,Unterricht,,,,à compléter
-,unterrichten,,,,à compléter
-,Besprechung,,,,à compléter
+,danach,après. Par conséquent. Conséquemment (adverbe),,,
+,sollen,devoir. devrait (should),,,
+,begrüßen,saluer,,,
+,Reparieren,réparer,,,
+das,Angebot,L'offre,,,
+,führen,promener un chien. Guider,,,
+das,Flugzeug,l'avion,,,
+,anderthalb,1 et demi,,,
+das,Abendbrot,souper (léger),,,
+,fern,distant,,,
+die,Regel,la règle (grammaire. loi),,,
+das,Studium,les études,,,
+das,Studio,un studio (logement),,,
+,tagsüber,durant la journée,,,
+,selten,rare. Peu fréquemment,,,
+der,Feier,la fête,,,
+der,Feierabend,la fin de la journée de travail,,,
+der,Unterricht,l'enseignement,,,
+,unterrichten,instruire. Enseigner,,,
+die,Besprechung,le débriefing. la critique. Le débat,,,
 ,anfangen,,,,à compléter
 ,Anfang,,,,à compléter
 ,vereinbar,,,,à compléter
