@@ -74,33 +74,34 @@ die,Regel,la règle (grammaire. loi),true,,
 das,Studium,les études,true,,
 das,Studio,un studio (logement),true,,
 ,tagsüber,durant la journée,true,,
-,selten,rare. Peu fréquemment,,,
-der,Feier,la fête,,,
-der,Feierabend,la fin de la journée de travail,,,
-der,Unterricht,l'enseignement,,,
-,unterrichten,instruire. Enseigner,,,
-die,Besprechung,le débriefing. la critique. Le débat,,,
-,anfangen,,,,à compléter
-,Anfang,,,,à compléter
-,vereinbar,,,,à compléter
-,vereinbaren,,,,à compléter
-,anrufen,,,,à compléter
-,Hahn,,,,à compléter
-,Reis,,,,à compléter
-,Nudeln,,,,à compléter
-,Chefin,,,,à compléter
-,Chef,,,,à compléter
-,Schinkenwurst,,,,à compléter
-,Tasse,,,,à compléter
-,treffen,,,,à compléter
-,Müsli,,,,à compléter
-,Banane,,,,à compléter
-,würzen,,,,à compléter
-,Produkte,,,,à compléter
-,Produkt,,,,à compléter
-,schälen,,,,à compléter
-,Schälen,,,,à compléter
-,seltsame,,,,à compléter
+,selten,rare. Peu fréquemment,true,,
+der,Feier,la fête,true,,
+der,Feierabend,la fin de la journée de travail,true,,
+der,Unterricht,l'enseignement,true,,
+,unterrichten,instruire. Enseigner,true,,
+die,Besprechung,le débriefing. la critique. Le débat,true,,
+,anfangen,commencer (ouvrir. Ouvrir une conversation par ex.),true,,
+der,Anfang,Le début. Le commencement,true,,
+,vereinbar,correspondant. Congruant,true,,
+,vereinbaren,arranger,true,,
+,anrufen,téléphoner,true,,
+der,Hahn,le coq,true,,
+der,Reis,le riz,true,,
+die,Nudel,la nouille,true,,
+die,Nudeln,les nouilles (pluriel),true,,
+die,Chefin,la cheffe,true,,
+der,Chef,le chef,true,,
+die,Schinkenwurst,la saucisse de jambon,true,,
+die,Tasse,la tasse,,,
+,treffen,rencontrer,,,
+das,Müsli,le musli,,,
+die,Banane,la banane,,,
+,würzen,assaisonner,,,
+die,Produkte,les produits (pluriel),,,
+das,Produkt,le produit,,,
+,schälen,éplucher,,,
+das,Schälen,l'épluchure,,,
+,seltsam,étrange. Particulier. non ordinaire,,,
 ,Gebrauch,,,,à compléter
 ,Erfindung,,,,à compléter
 ,Kunstwerk,,,,à compléter
