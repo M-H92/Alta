@@ -1,11 +1,22 @@
 <template>
   <section>
-    <h1>Introduction</h1>
+    <h1>Préambule</h1>
     <ol>
+      <li>Introduction</li>
       <li>Pourquoi une base de données</li>
       <li>Terminologies de base</li>
       <li>Installation</li>
+      <li>Conclusion</li>
     </ol>
+    <h2>Introduction</h2>
+    <p>
+      Dans cette section, nous allons voir le but de l'ajout d'une
+      <abbr class="db-tooltip" title="DataBase => Base de données">DB</abbr>
+      à votre projet de développement ainsi que quelques mots de vocabulaire de
+      base. <br />
+      Nous téléchargerons aussi les programmes nécessaire pour la suite de ce
+      cours
+    </p>
     <h2>Pourquoi une base de données</h2>
     <p>
       En tant que développeur, vous allez créer des systèmes remplissant trois
@@ -54,7 +65,7 @@
     </ul>
     <p>
       Dans cette <strong>optique de gestion des données</strong>, une
-      <span class="db-tooltip" title="DataBase => Base de données">DB</span>
+      <abbr class="db-tooltip" title="DataBase => Base de données">DB</abbr>
       pourra être mise en place pour faire
       <strong>persister</strong> les données et les
       <strong>restituer</strong> plus tard...
@@ -66,7 +77,7 @@
     <p>
       Il sera par conséquent important lors du processus d'analyse d'évaluer
       l'intérêt de la mise en place d'une
-      <span class="db-tooltip" title="DataBase => Base de données">DB</span> en
+      <abbr class="db-tooltip" title="DataBase => Base de données">DB</abbr> en
       prenant en considération les avantages qu'elle apporte
     </p>
     <ul>
@@ -82,7 +93,7 @@
     <p>
       Dans les cas précédents, il serait raisonnable d'imaginer l'utilisation
       d'une
-      <span class="db-tooltip" title="DataBase => Base de données">DB</span>
+      <abbr class="db-tooltip" title="DataBase => Base de données">DB</abbr>
       pour gérer les utilisateurs de son service ou les factures de son
       entreprise.
     </p>
@@ -98,6 +109,32 @@
       météorologique récupérant quotidiennement les données météo pour aggréger
       des moyennes et autres statistiques, un établissement scolaire souhaitant
       garder une trace des résultats des étudiants pendant plusieurs années...
+    </p>
+    <h2>Installation</h2>
+    <p>
+      Pour ce cours, nous allons utiliser système de gestion de base de données
+      <strong>postgreSQL</strong> ainsi que le logiciel <strong>pgAdmin</strong>
+    </p>
+    <p>
+      Vous pouvez télécharger l'installeur pour ces deux éléments sur
+      <a href="https://www.postgresql.org/download/">le site officiel</a> de
+      postgreSQL. <br />
+      Ce cours utilise la version 16.4 de postgre, mais rien ne vous empêche de
+      prendre une version plus à jour. <br />
+      Si à ce stade, vous n'êtes pas certain de pouvoir bien cerner les
+      différences entre PostgreSQL, pgAdmin et SQL, je vous sugggère de lire la
+      prochaine section pendant votre téléchargement.
+    </p>
+    <p>
+      Lorsque votre téléchargement est terminé, vous devriez pouvoir lancer
+      l'installeur et conserver les options par défaut. <br />
+      Notez qu'il ne sera pas nécessaire pour ce cours de faire des
+      installations supplémentaires via Stack builder
+    </p>
+    <p>
+      Une fois installé, vérifiez que tout se soit bien passé en ouvrant le
+      programme pgAdmin et en vous connectant au server grâce au mot de passe
+      attribué pendant l'installation
     </p>
     <h2>Terminologies de base</h2>
     <p>
@@ -153,7 +190,15 @@
       On aura par exemple MySQL avec MySQL Workbench par Oracle, SQL Server et
       SQL Server Management Studio par Microsoft, PostGreSQL et pgAdmin,...
     </p>
-    <h2>Installation</h2>
+    <h2>Conclusion</h2>
+    <p>
+      Au terme de cette section d'introduction, vous devriez maintenant avoir
+      une idée de l'intérêt que peut avoir une
+      <abbr class="db-tooltip" title="DataBase => Base de données">DB</abbr>
+      ainsi que de disposer de tout les outils nécessaires pour commencer à les
+      manipuler. <br />
+      Rendez-vous à la prochaine section pour ce faire
+    </p>
   </section>
 </template>
 
