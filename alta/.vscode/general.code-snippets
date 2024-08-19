@@ -17,6 +17,6 @@
 	// }
 	"database":{
 		"prefix": "database",
-		"body": "<span class=\"db-tooltip\" title=\"DataBase => Base de données\">DB</span>"
+		"body": "<abbr class=\"db-tooltip\" title=\"DataBase => Base de données\">DB</abbr>"
 	}
 }
