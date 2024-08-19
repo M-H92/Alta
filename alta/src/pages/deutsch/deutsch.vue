@@ -1,23 +1,13 @@
-<template>
-  <div>
-    <!-- <the-nav-bar /> -->
-    <sgbd />
-    <!-- <Deutsch /> -->
-  </div>
-</template>
+<template></template>
 <script setup>
-// import TheNavBar from "~/src/pages/theNavBar/theNavBar.vue";
-import sgbd from "~/src/pages/sgbd/sgbd.vue";
-import "~/assets/css/reset.css";
-import "~/assets/css/style.css";
-// import Deutsch from "./src/pages/deutsch/deutsch.vue";
-
 import { onMounted } from "vue";
 import Papa from "papaparse";
+// const fs = require("fs");
+// import { existsSync } from "fs";
 onMounted(async () => {
   let response;
   try {
-    const path = "data/deutsch.csv";
+    const path = "~\assets\data\deutsch.csv";
     // console.log("-------------");
     // console.log("exists?");
     // const file = new FileSystem();
@@ -28,7 +18,7 @@ onMounted(async () => {
     response = await fetch(path);
     const text = await response.text();
     const parsedData = Papa.parse(text, { header: true });
-    console.log(parsedData.data);
+    console.log(parsedData);
     // console.log("response.ok");
     // const reader = response.body.getReader();
     // console.log(await reader.read());

@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "nuxt": "^3.11.2",
+    "papaparse": "^5.4.1",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   }
