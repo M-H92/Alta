@@ -112,7 +112,7 @@
     </p>
     <p>
       Il existe et nous utiliserons d'autres types dans ce cours. Vous pouvez
-      trouver une référence complète aux types disponibles en suivant
+      trouver une référence complète sur les types disponibles en suivant
       <a href="https://www.postgresql.org/docs/current/datatype.html">
         ce lien vers la documentation officielle </a
       >.
@@ -123,7 +123,11 @@
       <strong>pgAdmin</strong>
     </p>
     <code lang="sql">
-      USE fat_cat_clinic; CREATE TABLE weight( weight decimal(3,1), date date )
+      USE fat_cat_clinic; <br />
+      CREATE TABLE weight( <br />
+      &nbsp;&nbsp;weight decimal(3,1), <br />
+      &nbsp;&nbsp;date date <br />
+      );
     </code>
     <p>
       Détaillons ensemble ce code : <br />
@@ -143,9 +147,117 @@
       chiffres dans le nombre) et l'échelle (le nombre de chiffres derrière la
       virgule) souhaitée. Ainsi, decimal(3,1) nous permettra d'encoder des poids
       en kg avec une précision à l'hectogramme et allant jusqu'à 99,9 kg. Nous
-      devrions être bon pour nos chats
+      devrions être bon pour nos chats. <br />
+      <code lang="sql">date date</code> permet de comme la ligne précédente de
+      créer une colonne. Celle-ci sera de type date <br />
+      N'oubliez pas de fermer la parenthèse et d'ajouter un <kbd>;</kbd>
     </p>
     <h2>Ajouter des enregistrements</h2>
+    <p>
+      Maintenant que notre <srong>table</srong> weight est créée, nous allons la
+      <span
+        title="Du wiktionnaire : (Bases de données) Alimenter (une table, une base de données) en informations."
+      >
+        populer
+      </span>
+      avec quelques informations.
+    </p>
+    <p>
+      Comme pour le point précédent, lisez attentivement ce code et exécutez le
+    </p>
+    <code lang="sql">
+      INSERT INTO weight (weight, date) <br />
+      &nbsp;&nbsp;VALUES (3.5, '2024-01-19');
+    </code>
+    <p>
+      <code lang="sql">INSERT INTO weight</code> permet d'insérer des données
+      dans la table weight
+    </p>
+    <p>
+      Les informations entre parenthèses
+      <code lang="sql">(weight, date)</code> permettent de spécifier quelles
+      valeurs seront insérées et dans quel ordre. <br />
+      Cette information pourrait être omise tant que les valeurs insérées sont
+      écrites dans l'ordre des colonnes de la table ciblée. <br />
+      Néanmoins, inclure cette information permet, entre autres, d'éviter
+      d'éventuelles erreurs. Je vous invite donc à ajouter systématiquement
+      cette information.
+    </p>
+    <p>
+      Le mot clé <code lang="sql">VALUES</code> précède les données à insérer
+      qui sont reprises entre parenthèses
+      <code lang="sql"> (3.5, '2024-01-19') </code>. Notez que la date est
+      entourées de <kbd>'</kbd> et au format
+      <i title="years-month-day respectivement sur 4, 2 et 2 chiffres">
+        yyyy-MM-dd
+      </i>
+    </p>
+    <p>
+      Pour bien faire, nous allons ajouter quelques données supplémentaires avec
+      le code suivant :
+    </p>
+    <code>
+      INSERT INTO weight (weight, date) <br />
+      &nbsp;&nbsp; VALUES (3.6, '2024-08-03')<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;,(3.7, '2024-07-06') <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;,(3.5, '2024-06-01') <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;,(3.6, '2024-05-04') <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;,(3.4, '2024-04-06') <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;,(3.4, '2024-03-02') <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;,(3.5, '2024-02-03');
+    </code>
+    <p>Ici, la même commande est utilisée pour insérer une série de données.</p>
     <h2>Lire les enregistrements</h2>
+    <p>
+      Maintenant que nous avons créé une base de données, créé une table et
+      inséré une série de données, nous pouvons commencer à lire celles-ci. Nous
+      allons donc en profiter pour faire quelques requêtes.
+    </p>
+    <p>
+      La première, ci-dessous, va nous permettre de lire les informations
+      contenues dans la table
+    </p>
+    <code lang="sql"> SELECT weight, date FROM weight; </code>
+    <p>
+      Les deux mots clés à retenir ici sont <code lang="sql">SELECT</code> et
+      <code lang="sql">FROM</code>. <br />
+      <code lang="sql">SELECT</code> sera suivi des colonnes à récupérer. Vous
+      pourriez donc ne sélectionner que les poids avec une requête
+      <code lang="sql">SELECT weight FROM weight;</code> <br />
+      <code lang="sql">FROM</code> permet de spécifier la table dans laquelle
+      récupérer les données.
+    </p>
+    <p>Une seconde version de cette requête sera la suivante</p>
+    <code lang="sql">SELECT * FROM weight;</code>
+    <p>
+      Ici, le symbole <kbd>*</kbd> sera utilisé comme <i>joker</i> pour
+      signifier <i>toutes les colonnes</i>. <br />
+      Pratique pour les tests, mais à ne pas utiliser de manière systématique
+      dans vos projets de développement. Nous en reparlerons plus tard.
+    </p>
+    <p>
+      Pour voir l'évolution dans le temps du poids du chat observé, il serait
+      intéressant de trier les résultats par date. <br />
+      Bonne nouvelle, c'est possible avec la paire de mots clés
+      <code lang="sql">ORDER BY</code>.
+    </p>
+    <code lang="sql">
+      SELECT * FROM weight <br />
+      ORDER BY date;
+    </code>
+    <p>
+      Il sera même possible de choisir l'ordre du tri en ajoutant soit
+      <code lang="sql">ASC</code> ou <code lang="sql">DESC</code> après notre
+      <code lang="sql">ORDER BY</code>
+    </p>
+    <code lang="sql">
+      SELECT * FROM weight <br />
+      ORDER BY date DESC;
+    </code>
+    <p>
+      Pratique ! Et cela ne s'applique pas qu'aux dates ! Même si dans notre
+      cas, trier par poids semble moins pertinent, je vous invite l'essayer.
+    </p>
+    <h2>Conclusion</h2>
   </section>
 </template>
