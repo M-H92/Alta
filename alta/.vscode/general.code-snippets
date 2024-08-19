@@ -18,5 +18,9 @@
 	"database":{
 		"prefix": "database",
 		"body": "<abbr class=\"db-tooltip\" title=\"DataBase => Base de données\">DB</abbr>"
+	},
+	"tabulation":{
+		"prefix": "tab",
+		"body": "&nbsp;&nbsp;"
 	}
 }
