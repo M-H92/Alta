@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>
-      Première création d'une
+      Première
       <abbr class="db-tooltip tooltip" title="DataBase => Base de données"
         >DB</abbr
       >
@@ -256,8 +256,19 @@
     </code>
     <p>
       Pratique ! Et cela ne s'applique pas qu'aux dates ! Même si dans notre
-      cas, trier par poids semble moins pertinent, je vous invite l'essayer.
+      cas, trier par poids semble moins pertinent, je vous invite à essayer.
     </p>
     <h2>Conclusion</h2>
+    <p>
+      Dans cette section, vous avez eu appris à créer une base de données, créer
+      une table, insérer des enregistrements et enfin, lire des enregistrements.
+    </p>
+    <p>
+      Vous avez appris comment définir les types des données lors de la création
+      de tables et aussi comment modifier une requête de lecture .
+    </p>
+    <p>
+      Ces différents concepts seront approfondis dans les prochaines sections
+    </p>
   </section>
 </template>
