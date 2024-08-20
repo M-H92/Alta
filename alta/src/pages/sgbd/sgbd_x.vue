@@ -21,8 +21,22 @@
       <tr>
         <th>Documentation officielle postgresql</th>
         <th>Data type</th>
-        <th>Première création d'une DB</th>
+        <th>Première DB</th>
         <th>https://www.postgresql.org/docs/current/datatype.html</th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Documentation officielle postgresql</th>
+        <th>Fonctions d'aggrégation</th>
+        <th>Relations</th>
+        <th>https://www.postgresql.org/docs/16/functions-aggregate.html</th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Documentation officielle postgresql</th>
+        <th>Types de données de texte</th>
+        <th>Relations</th>
+        <th>https://www.postgresql.org/docs/current/datatype-character.html</th>
         <th></th>
       </tr>
     </tbody>
