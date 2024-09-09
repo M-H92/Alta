@@ -188,7 +188,7 @@
     <ul>
       <li>weight</li>
       <li>date</li>
-      <li>cat</li>
+      <li>name</li>
     </ul>
     <p>cat</p>
     <ul>
@@ -199,11 +199,150 @@
       <li>ideal_weight</li>
       <li>neutered</li>
     </ul>
-    <p></p>
+    <p>
+      Vous avez remarqué quelque chose? <br />
+      C'est ça, la colonne <i>name</i> est dupliquée dans les deux tables car
+      une pesée est liée à un chat, tout comme les informations générales !
+      <br />
+      C'est normal gardez bien ça en tête car nous allons en profiter par après.
+      <br />
+      En attendant, mettons en place ces deux tables avec le code suivant :
+    </p>
+    <pre>
+      CREATE TABLE weighting(
+        name varchar(32),
+        date date,
+        weight numeric(3,1)
+      );
 
+      CREATE TABLE cat(
+        name varchar(32),
+        race varchar(32),
+        is_male boolean,
+        age int,
+        ideal_weight numeric(3,1),
+        neutered boolean
+      )
+    </pre>
+    <p>Et ajoutons quelques données</p>
+    <pre>
+      INSERT INTO weighting (weight, date, name) 
+      VALUES (3.6, '2024-08-03', 'Monza')
+        ,(3.7, '2024-07-06', 'Monza') 
+        ,(3.5, '2024-06-01', 'Monza') 
+        ,(3.6, '2024-05-04', 'Monza') 
+        ,(3.4, '2024-04-06', 'Monza') 
+        ,(3.4, '2024-03-02', 'Monza') 
+        ,(3.5, '2024-02-03', 'Monza')
+        ,(7.5, '2024-06-03', 'Plume') 
+        ,(7.6, '2024-05-04', 'Plume') 
+        ,(7.5, '2024-04-05', 'Plume') 
+        ,(7.4, '2024-03-02', 'Plume');
+      
+      INSERT INTO cat (name, race, is_male, age, ideal_weight, neutered)
+      VALUES ('Monza', 'Persan', true, 7, 6.5, true)
+        ,('Plume', 'Maine coon', false, 5, 6, true)
+    </pre>
+    <p>
+      Vous devriez être en mesure d'identifier tout les éléments de ces deux
+      requêtes, bien que certains types soient utilisés ici pour la première
+      fois. <br />
+      Si des questions persistaient, n'hésitez pas à consulter les chapitres
+      précédents ou à faire une recherche rapide sur internet avant de passer à
+      la prochaine section
+    </p>
+    <h2>Jointures (introduction)</h2>
+    <p>
+      Revenons maintenant à cette donnée dupliquée <br />
+      Vous vous souvenez, nous avions parlé plus tôt de relations entre les
+      tables... <br />
+      Et bien c'est cette donnée dupliquée qui va nous permettre de créer et
+      manipuler ces relations. <br />
+      Nous pouvons maintenant mettre <i>en relation</i> les données
+      <i>name</i> des tables <i>weighting</i> et <i>cat</i> (il ne s'agit pas
+      ici de la véritable définition d'une relation en base de données. Nous
+      reviendrons sur celle-ci plus tard) <br />
+    </p>
+    <p>
+      Maintenant, si nous voulons récupérer une pesée ainsi que le poids idéal
+      de notre chat, nous n'avons "qu'à" récupérer les données présentes dans la
+      table <i>weighting</i> pour 'Monza'... Et, toujours pour 'Monza', les
+      données de la table <i>cat</i>... En même temps... <br />
+      Pas de panique, c'est nettement moins compliqué que ça en à l'air.
+      Analysez plutôt le code ci-dessous :
+    </p>
+    <pre>
+      SELECT cat.name, cat.ideal_weight, weighting.weight, weighting.date
+      FROM cat
+      JOIN weighting ON cat.name = weighting.name
+      ORDER BY weighting.date DESC;
+    </pre>
+    <p>
+      Tout d'abord, notons une différence sur l'écriture des noms de colonne.
+      <br />
+      Elles sont nommées avec le nom de la table, suivie d'un point et du nom de
+      colonne. <br />
+      Ceci permet, lors de la manipulation de plusieurs tables, de ne pas se
+      tromper sur la provenance des données. <br />
+      Cette nomenclature était d'ailleurs déjà faisable avec une unique table,
+      mais a tendance à rendre plus lourde la lecture et a donc été évitée.
+      <br />
+      À l'inverse, la nomenclature sans le nom de table est tout à fait
+      envisageable pour les colonnes comme ideal_weight pour lesquelles la
+      provenance ne fait aucun doute. Mais il est en général avisé de précéder
+      chaque colonne de sa table lors de jointures pour se faciliter la tâche à
+      la lecture.
+    </p>
+    <p>
+      Ensuite, regardons le nouveau mot clé en deux partie <br />
+      <code>JOIN table ON critère</code> permet de <i>joindre</i> une table à la
+      table courante sur base d'un critère. De faire une
+      <strong>liaison</strong>, une <strong>jointure</strong>. Ici, le critère
+      est une simple égalité entre les valeurs des colonnes <i>name</i> des
+      tables <i>cat</i> et <i>weighting</i>
+    </p>
+    <p>
+      Pour le plaisir de la lecture, réduisont un peu la taille de cette requête
+      en utilisant une notion vue précédement, les alias, mais sur les tables.
+    </p>
+    <pre>
+      SELECT c.name, c.ideal_weight, w.weight, w.date 
+      FROM cat AS c 
+      JOIN weighting as w on c.name = w.name
+      ORDER BY w.date DESC;
+    </pre>
+    <p>
+      Encore mieux, nous prenoms toutes les colonnes de la table
+      <i>weighting</i>. Essayons ceci :
+    </p>
+    <pre>
+      SELECT w.*, c.ideal_weight 
+      FROM cat as c 
+      JOIN weighting as w on c.name = w.name 
+      ORDER BY w.date DESC;
+    </pre>
+    <p>
+      Il est même possible de faire une requête de ce genre
+      <code>SELECT w.*, c.*</code>. Je vous laisse imaginer le résultat
+    </p>
+    <p>Avant de passez à la section suivante, je vous propose deux exercices</p>
+    <p>
+      D'abord, essayez de modifier encore la base de données en séparant les
+      données dans une troisième table. <br />
+      Réfléchissez bien à la manière de séparer les données de façon logique,
+      et, si vous avez besoin d'un indice, demandez-vous ce qu'il se passerait
+      si nous ajoutions un autre chat persan ou maine coon
+    </p>
+    <p>
+      Ensuite, maintenant cette séparation faite, essayez de récupérer les
+      informations en faisant une double jointure ! (si, si, c'est faisable)
+      <br />
+      Vous devrez certainement faire une recherche internet pour trouver une
+      solution. Mais n'hésitez pas à tester ce qu'il vous semblerait logique
+      avant ça. Quitte à vous tromper.
+    </p>
     <h2>Clé primaires</h2>
     <h2>Clé étrangères</h2>
-    <h2>Jointures (introduction)</h2>
     <h2>Requêtes imbriquées (introductions)</h2>
     <h2>Tables de liaison</h2>
   </section>
