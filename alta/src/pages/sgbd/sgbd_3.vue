@@ -77,7 +77,7 @@
           <th>race</th>
           <th>is_male</th>
           <th>age</th>
-          <th>is_sterilised</th>
+          <th>neutered</th>
         </tr>
       </thead>
       <tbody>
@@ -172,8 +172,34 @@
     </p>
     <p>
       Certains l'auront déjà remarqué ou entendu : on parle parfois de base de
-      données relationnelles
+      données <strong> relationnelles </strong>. <br />
+      L'idée est simple : créer plusieurs tables et établir des
+      <i>relations</i> entre ces tables pour pouvoir liers les données de l'une
+      et de l'autre
     </p>
+    <p>
+      Dans notre cas, nous pourrions séparer nos données entre celles qui sont
+      en rapport direct avec notre chat en soi (nom, race, sexe, age, poids
+      idéal, stérilisé ) et celles qui ont un rapport avec les différentes
+      pesées de nos chats (poids, date et nom) <br />
+      Nous aurions donc les deux tables suivantes :
+    </p>
+    <p>weight</p>
+    <ul>
+      <li>weight</li>
+      <li>date</li>
+      <li>cat</li>
+    </ul>
+    <p>cat</p>
+    <ul>
+      <li>name</li>
+      <li>race</li>
+      <li>is_male</li>
+      <li>age</li>
+      <li>ideal_weight</li>
+      <li>neutered</li>
+    </ul>
+    <p></p>
 
     <h2>Clé primaires</h2>
     <h2>Clé étrangères</h2>
