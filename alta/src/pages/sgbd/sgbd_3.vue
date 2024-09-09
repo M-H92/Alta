@@ -1,5 +1,54 @@
 <template>
   <section>
+    <h2>Contraintes</h2>
+    <p>
+      Quand nous avions ajouté le nom de l'animal à notre table, nous avions eu
+      un problème de <i>null</i>. <br />
+      Petit rappel, null représente, pour un colonne d'un record, qu'il n'y a
+      pas de données
+    </p>
+    <p>
+      Ceci nous avais contraint à modifier nos données via une requête
+      <i>UPDATE</i> avec l'utilisation d'un <i>WHERE</i> et, heureusement, la
+      différence de poids entre mon chat et celui de ma belle soeur était telle
+      qu'une clause where sur le poids de nos animaux avait suffit à discerner
+      nos animaux
+    </p>
+    <p>
+      Néanmoins, à l'avenir, avec plus de chats ou de pesées, ça pourrait ne
+      plus suffire.
+    </p>
+    <p>
+      Nous allons donc nous prémunire de ce problème avec une
+      <strong>constraint</strong>
+    </p>
+    <p>
+      Une <i>constraint</i> est, comme son nom l'indique, une contrainte que
+      l'on peut appliquer, par exemple, sur notre colonne <i>cat</i> pour
+      interdire les valeurs nulles. Appliquons la avec le code suivant :
+    </p>
+    <code> ALTER TABLE weight ALTER COLUMN cat SET NO NULL; </code>
+    <p>
+      Pas de surprise ici. Les différents mot-clés sont presque tous connus
+      <br />
+      Nous <i>alterons</i> la <i>table</i> <i>weight</i> pour laquelle nous
+      <i>alterons</i> la <i>colonne</i> <i>cat</i> <br />
+      Pour cette colonne, nous spécifions qu'elle ne peut pas contenir la valeur
+      <i>null</i> avec <strong>SET NO NULL</strong>
+    </p>
+    <p>
+      Tant que nous y somme, posons nous la question : est-ce qu'une pesée sans
+      poids peut avoir du sens? quid d'une pesée non datée? Ajoutons aussi les
+      contraintes <i>NO NULL</i> pour ces deux colonnes
+    </p>
+    <p>
+      Vous avez peut-être essayé de mettre la contrainte <i>NO NULL</i> alors
+      que votre colonne contenait déjà des valeurs nulles. <br />
+      Non? <br />
+      Essayez-donc pour voir le résultat <br />
+      Essayez aussi d'insérer des valeurs nulles maintenant que les contraintes
+      sont appliquées
+    </p>
     <h2>Problème de poids</h2>
     <p>
       Pour profiter des capacités de notre base de données à traiter la donnée
