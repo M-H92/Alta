@@ -12,32 +12,32 @@
     </thead>
     <tbody>
       <tr>
-        <th>Site officiel postgresql</th>
-        <th>Page de téléchargement</th>
-        <th>Préambule</th>
-        <th>https://www.postgresql.org/download/</th>
-        <th></th>
+        <td>Site officiel postgresql</td>
+        <td>Page de téléchargement</td>
+        <td>Préambule</td>
+        <td>https://www.postgresql.org/download/</td>
+        <td></td>
       </tr>
       <tr>
-        <th>Documentation officielle postgresql</th>
-        <th>Data type</th>
-        <th>Première DB</th>
-        <th>https://www.postgresql.org/docs/current/datatype.html</th>
-        <th></th>
+        <td>Documentation officielle postgresql</td>
+        <td>Data type</td>
+        <td>Première DB</td>
+        <td>https://www.postgresql.org/docs/current/datatype.html</td>
+        <td></td>
       </tr>
       <tr>
-        <th>Documentation officielle postgresql</th>
-        <th>Fonctions d'aggrégation</th>
-        <th>Relations</th>
-        <th>https://www.postgresql.org/docs/16/functions-aggregate.html</th>
-        <th></th>
+        <td>Documentation officielle postgresql</td>
+        <td>Fonctions d'aggrégation</td>
+        <td>Relations</td>
+        <td>https://www.postgresql.org/docs/16/functions-aggregate.html</td>
+        <td></td>
       </tr>
       <tr>
-        <th>Documentation officielle postgresql</th>
-        <th>Types de données de texte</th>
-        <th>Relations</th>
-        <th>https://www.postgresql.org/docs/current/datatype-character.html</th>
-        <th></th>
+        <td>Documentation officielle postgresql</td>
+        <td>Types de données de texte</td>
+        <td>Relations</td>
+        <td>https://www.postgresql.org/docs/current/datatype-character.html</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
