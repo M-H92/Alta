@@ -11,6 +11,7 @@
       <li>WHERE suite</li>
       <li>Conclusion</li>
     </ol>
+    <hr />
     <!-- Ajouter un nom au chat
      Ajouter des records
      Prendre tout et trier par chat

@@ -8,6 +8,7 @@
       <li>Installation</li>
       <li>Conclusion</li>
     </ol>
+    <hr />
     <h2>Introduction</h2>
     <p>
       Dans cette section, nous allons voir le but de l'ajout d'une

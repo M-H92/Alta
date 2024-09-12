@@ -1,7 +1,7 @@
 <template></template>
 <script setup>
 import { onMounted } from "vue";
-import Papa from "papaparse";
+// import Papa from "papaparse";
 // const fs = require("fs");
 // import { existsSync } from "fs";
 onMounted(async () => {

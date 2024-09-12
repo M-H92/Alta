@@ -14,6 +14,7 @@
       <li>Lire les enregistrements</li>
       <li>Conclusion</li>
     </ol>
+    <hr />
     <h2>Introduction</h2>
     <p>
       Dans cette section, nous allons créer notre première

@@ -13,7 +13,7 @@ import "~/assets/css/style.css";
 // import Deutsch from "./src/pages/deutsch/deutsch.vue";
 
 import { onMounted } from "vue";
-import Papa from "papaparse";
+// import Papa from "papaparse";
 onMounted(async () => {
   let response;
   try {
