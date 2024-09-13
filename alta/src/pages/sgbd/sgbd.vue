@@ -9,7 +9,7 @@
     </template>
     <button @click="displayAll = !displayAll">Tout</button>
   </nav>
-  <main v-if="!displayAll">
+  <!-- <main v-if="!displayAll">
     <component :is="getActiveComponent"></component>
   </main>
   <main v-else>
@@ -17,6 +17,18 @@
       <component :is="c.value"></component>
       <hr style="margin: 32px 0px" />
     </template>
+  </main> -->
+  <main>
+    <sgbd_0 />
+    <hr />
+    <sgbd_1 />
+    <hr />
+    <sgbd_2 />
+    <hr />
+    <sgbd_3 />
+    <hr />
+    <sgbd_x />
+    <hr />
   </main>
 </template>
 
