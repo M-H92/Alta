@@ -158,14 +158,14 @@
       Sélectionnez à nouveau les informations de la table <i>weight</i> pour
       voir que chaque enregistrement est maintenant au nom de <i>Monza</i>
     </p>
-    <h2>WHERE</h2>
+    <!-- <h2>WHERE</h2> -->
     <!-- Ajouter des chats et filtrer sur chats -->
-    <h2>Clé primaire</h2>
+    <!-- <h2>Clé primaire</h2> -->
     <!-- Nouvelle table de chats avec clé primaire -->
-    <h2>Clé étrangères et relations</h2>
+    <!-- <h2>Clé étrangères et relations</h2> -->
     <!-- Clé étrangère correspondante -->
-    <h2>WHERE suite</h2>
+    <!-- <h2>WHERE suite</h2> -->
     <!-- Amélio -->
-    <h2>Conclusion</h2>
+    <!-- <h2>Conclusion</h2> -->
   </section>
 </template>

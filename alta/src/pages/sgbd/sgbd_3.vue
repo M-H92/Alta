@@ -341,10 +341,9 @@
       solution. Mais n'hésitez pas à tester ce qu'il vous semblerait logique
       avant ça. Quitte à vous tromper.
     </p>
-    <h2>Clé primaires</h2>
+    <!-- <h2>Clé primaires</h2>
     <h2>Clé étrangères</h2>
     <h2>Requêtes imbriquées (introductions)</h2>
-    <h2>Tables de liaison</h2>
+    <h2>Tables de liaison</h2> -->
   </section>
 </template>
-<script></script>
