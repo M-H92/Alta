@@ -334,13 +334,25 @@
       si nous ajoutions un autre chat persan ou maine coon
     </p>
     <p>
-      Ensuite, maintenant cette séparation faite, essayez de récupérer les
+      Ensuite, après avoir fait cette séparation, essayez de récupérer les
       informations en faisant une double jointure ! (si, si, c'est faisable)
       <br />
       Vous devrez certainement faire une recherche internet pour trouver une
       solution. Mais n'hésitez pas à tester ce qu'il vous semblerait logique
-      avant ça. Quitte à vous tromper.
+      avant ça. Quitte à vous tromper. <br />
+      Ci-dessous, une solution
     </p>
+    <pre>
+      -- Séparation dans une nouvelle table
+
+      -- Populate de la nouvelle table 
+      
+      -- SELECT avec double jointure
+      SELECT *
+      FROM cat as c
+      JOIN weighting as w on c.name = w.name 
+      JOIN 
+    </pre>
     <!-- <h2>Clé primaires</h2>
     <h2>Clé étrangères</h2>
     <h2>Requêtes imbriquées (introductions)</h2>
