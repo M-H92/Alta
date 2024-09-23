@@ -27,22 +27,22 @@
       l'on peut appliquer, par exemple, sur notre colonne <i>cat</i> pour
       interdire les valeurs nulles. Appliquons la avec le code suivant :
     </p>
-    <code> ALTER TABLE weight ALTER COLUMN cat SET NO NULL; </code>
+    <code> ALTER TABLE weight ALTER COLUMN cat SET NOT NULL; </code>
     <p>
       Pas de surprise ici. Les différents mot-clés sont presque tous connus
       <br />
       Nous <i>alterons</i> la <i>table</i> <i>weight</i> pour laquelle nous
       <i>alterons</i> la <i>colonne</i> <i>cat</i> <br />
       Pour cette colonne, nous spécifions qu'elle ne peut pas contenir la valeur
-      <i>null</i> avec <strong>SET NO NULL</strong>
+      <i>null</i> avec <strong>SET NOT NULL</strong>
     </p>
     <p>
       Tant que nous y somme, posons nous la question : est-ce qu'une pesée sans
       poids peut avoir du sens? quid d'une pesée non datée? Ajoutons aussi les
-      contraintes <i>NO NULL</i> pour ces deux colonnes
+      contraintes <i>NOT NULL</i> pour ces deux colonnes
     </p>
     <p>
-      Vous avez peut-être essayé de mettre la contrainte <i>NO NULL</i> alors
+      Vous avez peut-être essayé de mettre la contrainte <i>NOT NULL</i> alors
       que votre colonne contenait déjà des valeurs nulles. <br />
       Non? <br />
       Essayez-donc pour voir le résultat <br />
