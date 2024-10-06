@@ -31,7 +31,8 @@
       Client : Thomas George <br />
       Total TTC : 178.70 € <br />
       Date : 24/09/20 <br />
-      Accompte : 150 €
+      Accompte : 150 € <br />
+      Reste à payer : 28.7 €
     </div>
     <table>
       <thead>
@@ -75,6 +76,62 @@
         </tr>
       </tbody>
     </table>
-    <p></p>
+    <h2>Gestion de stock</h2>
+    <p>
+      Le même entrepreneur a vu sa part de revenu entre la vente et le service
+      évoluer de telle sorte qu'il fasse maintenant beaucoup plus d'achat /
+      vente que de services <br />
+      Par conséquent, la gestion de son stock est devenue plus complexe <br />
+      Modifier la base de donnée pour implémenter une gestion de stock
+    </p>
+    <h2>Échec</h2>
+    <p>
+      Un éditeur de jeu de plateau souhaite se lancer dans le développement
+      d'une plateforme en ligne de jeu d'Échec
+      <br />
+      Non seulement, ils souhaitent pouvoir enregistrer les joueurs, leur elo et
+      leur adresse email<br />
+      Mais en plus, ils souhaitent garder une trace des différentes parties
+      jouées <br />
+      Aux échecs, une partie est une succession de coups avec une notation dont
+      les règles sont la suivante <br />
+      On commence par un coup blanc suivi d'un coup noir tout deux séparés par
+      une virugule <br />
+      Une paire de coup (blanc et noir) est suivi d'un retour à la ligne
+      <br />
+      Une initiale désigne la pièce jouée sauf si la pièce jouée est évident
+      (une unique pièce est capable de faire ce déplacement)<br />
+      Un caractère <b>x</b> est ajouté si le coup résulte en une prise de pièce
+      adverse <br />
+      La case d'arrivée de la pièce jouée est noté avec une lettre allant de a à
+      h et un nombre de 1 à 8<br />
+      Si le coup joué met le roi adverse en échec, un caractère <b>+</b> est
+      ajouté à la fin du coup <br />
+      Si le coup joué met le roi adverse en échec et mat, un caractère
+      <b>#</b> est ajouté. Accessoirement, la partie est finie<br />
+      Un coup brillant est parfois noté en ajoutant un caractère <b>!</b> voir
+      <b>!!</b> dans les cas les plus rares<br />
+      Un coup spécial, le roque, est noté avec la suite de caractères
+      <b>O-O</b> ou <b>O-O-O</b> selon qu'il s'agisse d'un petit roque ou d'un
+      grand roque<br />
+      Les paires de coups sont numérotés à partir de 1 et incrémentent d'une
+      unité à la fois dans l'ordre chronologique de la partie<br />
+      Un exemple de suite de coups pourrait être le suivant <br />
+      4. e5,Nfd7 <br />
+      5. f4,c5 <br />
+      6. Nf3,Nc6 <br />
+      Les différentes pièces sont représentés par : <br />
+      Le roi (King) - K <br />
+      La dame (Queen) - Q <br />
+      La tour (Rook) - R <br />
+      Le fou (Bishop) - B <br />
+      Le cavalier (kNight) - N (K étant déjà utilisé pour le roi) <br />
+      Le pion (pawn) - N/A. Le pion n'est jamais représenté par son initiale
+      <br />
+      Le pion n'étant jamais représenté par son initiale, un coup ambigu joué
+      par un pion sera noté avec la colonne de départ du pion plutôt que son
+      initiale : <br />
+      exf6 => le pion e5 prends f6
+    </p>
   </section>
 </template>

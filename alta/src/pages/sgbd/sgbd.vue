@@ -27,6 +27,10 @@
     <hr />
     <sgbd_3 />
     <hr />
+    <!-- <sgbd_4 />
+    <hr /> -->
+    <sgbd_5 />
+    <hr />
     <sgbd_x />
     <hr />
   </main>
@@ -37,6 +41,7 @@ import sgbd_0 from "./sgbd_0.vue";
 import sgbd_1 from "./sgbd_1.vue";
 import sgbd_2 from "./sgbd_2.vue";
 import sgbd_3 from "./sgbd_3.vue";
+import sgbd_5 from "./sgbd_3.vue";
 import sgbd_x from "./sgbd_x.vue";
 
 type comp = typeof sgbd_0;
