@@ -20,6 +20,7 @@
   </main> -->
   <main>
     <h1>Hello world</h1>
+    <h1>Hello world</h1>
     <sgbd_0 />
     <hr />
     <sgbd_1 />
